@@ -1,24 +1,14 @@
-    <html>
-        <head>
-            <title>con todo el flow</title>
-        </head>
-        <body>
-            <div>
-                <h1><a href="">el dios del flow</a></h1>
-            </div>
+				{%extends 'blog/base.html'%}
+				{%block content%}
+						{% for post in posts %}
+							<div class="post">
+								<div class="date">
+									{{ post.published_date }}
+								</div>
+									<h1><a href="">{{ post.title }}</a></h1>
+									<p>{{ post.text|linebreaksbr }}</p>
+							</div>
+						{% endfor %}
+					{%endblock content%}
 
-            <div>
-                <p>publucado: 23.08.2016, 01:06</p>
-                <h2><a href="">todos tenemos flow</a></h2>
-                <p>desde mi pareser creo que todos tenemos el flow en el interior </p>
-            <br />
-				<p>el flow es aquel espiritu que se rencarna en ti cuando te sientes inspirado y quieres pistear</p>
-			</div>
-
-            <div>
-                <p>publicado: 23.08.2016, 01:20</p>
-                <h2><a href="">la llamada del flow</a></h2>
-                <p>para muchas personas el flow es como una religuion que los exita a provocar caos y disturbios pero para otros es un tipo de hermandad donde todos tradan de alegrar la vidad de quienes los rodea con su flow v .</p>
-            </div>
-        </body>
-    </html>
+	
